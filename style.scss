@@ -1,8 +1,9 @@
 $bg-prov: hsla(180, 70%, 40%, 0.8);
 $bdRadius-medium: 4px;
+$bdRadius-small: 2px;
 
 :root {
-  font-weight: 16px;
+  font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -45,6 +46,7 @@ main {
         }
         .article {
             border: 0.2rem solid $bg-prov;
+            border-radius: $bdRadius-medium;
             margin: 1rem 0;
             .articleTitle {
                 margin: .8rem;
@@ -53,10 +55,34 @@ main {
             .articleContent {
                 width: 80%;
                 margin: 0 auto 0.8rem auto;
+                display: grid;
             }
         }
-
+        
     }
 }
+
+.article1 {
+    .articleContent {
+        display: grid;
+        grid-template-columns: repeat(4, 25fr);
+        grid-gap: 0.5rem;
+        .cell {
+            background: $bg-prov;
+            text-align: center;
+            padding: 0.3rem;
+            border-radius: $bdRadius-small;
+        }
+        .cell3 {
+            grid-column: span 2;
+            grid-row: span 2;
+            background: hsla(39, 100%, 45%, 1);
+            display: grid;
+            align-content: center;
+
+        }
+    }
+}
+
 
 
