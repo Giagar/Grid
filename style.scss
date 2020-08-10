@@ -1,0 +1,62 @@
+$bg-prov: hsla(180, 70%, 40%, 0.8);
+$bdRadius-medium: 4px;
+
+:root {
+  font-weight: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#mainContainer {
+    max-width: 1700px;
+    margin: 0 auto;
+}
+
+header {
+  background: $bg-prov;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+    border: 0.4rem solid $bg-prov;
+    border-radius: $bdRadius-medium;
+    .section {
+        padding: 1.5rem;
+        .sectionTitle {
+            text-align: center;
+        }
+        .article {
+            border: 0.2rem solid $bg-prov;
+            margin: 1rem 0;
+            .articleTitle {
+                margin: .8rem;
+                text-align: center;
+            }
+            .articleContent {
+                width: 80%;
+                margin: 0 auto 0.8rem auto;
+            }
+        }
+
+    }
+}
+
+
