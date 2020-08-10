@@ -96,3 +96,13 @@ main {
       }
   }
 }
+
+.article3 {
+    .articleContent{
+        @extend %span_article-content;
+        .cell3 {
+            grid-column: span 5;
+            background: $highlightedCell;
+        }
+    }
+}
