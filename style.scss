@@ -1,6 +1,19 @@
 $bg-prov: hsla(180, 70%, 40%, 0.8);
 $bdRadius-medium: 4px;
 $bdRadius-small: 2px;
+$highlightedCell: hsla(39, 100%, 45%, 1);
+
+%span_article-content {
+  display: grid;
+  grid-template-columns: repeat(4, 25fr);
+  grid-gap: 0.5rem;
+  .cell {
+    background: $bg-prov;
+    text-align: center;
+    padding: 0.3rem;
+    border-radius: $bdRadius-small;
+  }
+}
 
 :root {
   font-size: 20px;
@@ -14,8 +27,8 @@ $bdRadius-small: 2px;
 }
 
 #mainContainer {
-    max-width: 1700px;
-    margin: 0 auto;
+  max-width: 1700px;
+  margin: 0 auto;
 }
 
 header {
@@ -35,54 +48,51 @@ header {
 }
 
 main {
-    width: 80%;
-    margin: 0 auto;
-    border: 0.4rem solid $bg-prov;
-    border-radius: $bdRadius-medium;
-    .section {
-        padding: 1.5rem;
-        .sectionTitle {
-            text-align: center;
-        }
-        .article {
-            border: 0.2rem solid $bg-prov;
-            border-radius: $bdRadius-medium;
-            margin: 1rem 0;
-            .articleTitle {
-                margin: .8rem;
-                text-align: center;
-            }
-            .articleContent {
-                width: 80%;
-                margin: 0 auto 0.8rem auto;
-                display: grid;
-            }
-        }
-        
+  width: 80%;
+  margin: 0 auto;
+  border: 0.4rem solid $bg-prov;
+  border-radius: $bdRadius-medium;
+  .section {
+    padding: 1.5rem;
+    .sectionTitle {
+      text-align: center;
     }
+    .article {
+      border: 0.2rem solid $bg-prov;
+      border-radius: $bdRadius-medium;
+      margin: 1rem 0;
+      .articleTitle {
+        margin: 0.8rem;
+        text-align: center;
+      }
+      .articleContent {
+        width: 80%;
+        margin: 0 auto 0.8rem auto;
+        display: grid;
+      }
+    }
+  }
 }
 
 .article1 {
-    .articleContent {
-        display: grid;
-        grid-template-columns: repeat(4, 25fr);
-        grid-gap: 0.5rem;
-        .cell {
-            background: $bg-prov;
-            text-align: center;
-            padding: 0.3rem;
-            border-radius: $bdRadius-small;
-        }
-        .cell3 {
-            grid-column: span 2;
-            grid-row: span 2;
-            background: hsla(39, 100%, 45%, 1);
-            display: grid;
-            align-content: center;
-
-        }
+  .articleContent {
+    @extend %span_article-content;
+    .cell3 {
+      grid-column: span 2;
+      grid-row: span 2;
+      background: $highlightedCell;
+      display: grid;
+      align-content: center;
     }
+  }
 }
 
-
-
+.article2 {
+  .articleContent {
+      @extend %span_article-content;
+      .cell3 {
+          grid-column: span 3;
+          background: $highlightedCell;
+      }
+  }
+}
