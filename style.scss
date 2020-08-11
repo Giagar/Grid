@@ -15,6 +15,12 @@ $highlightedCell: hsla(39, 100%, 45%, 1);
   }
 }
 
+%auto_article-content {
+  @extend %span_article-content;
+  border: 2px dashed $highlightedCell;
+  border-radius: $bdRadius-small;
+}
+
 :root {
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
@@ -109,6 +115,14 @@ main {
 
 .article4 {
   .articleContent {
-  
+    @extend %auto_article-content;
+    grid-template-columns: repeat(auto-fill, minmax(35px, auto));
+  }
+}
+
+.article5 {
+  .articleContent {
+    @extend %auto_article-content;
+    grid-template-columns: repeat(auto-fit, minmax(35px, auto));
   }
 }
