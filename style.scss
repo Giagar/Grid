@@ -147,27 +147,27 @@ main {
     }
 
     .cell1 {
-      background: grey;
+      background: #51bebe;
       grid-area: header;
     }
 
     .cell2 {
-      background: green;
+      background: #37db86;
       grid-area: main;
     }
 
     .cell3 {
-      background: blue;
+      background: #5F9579;
       grid-area: sidebar1;
     }
 
     .cell4 {
-      background: orange;
+      background: #336b54;
       grid-area: sidebar2;
     }
 
     .cell5 {
-      background: lightgreen;
+      background: #4b595e;
       grid-area: footer;
     }
 

@@ -109,23 +109,23 @@ main .section .article .articleContent {
   align-content: center;
 }
 .article6 .articleContent .cell1 {
-  background: grey;
+  background: #51bebe;
   grid-area: header;
 }
 .article6 .articleContent .cell2 {
-  background: green;
+  background: #37db86;
   grid-area: main;
 }
 .article6 .articleContent .cell3 {
-  background: blue;
+  background: #5F9579;
   grid-area: sidebar1;
 }
 .article6 .articleContent .cell4 {
-  background: orange;
+  background: #336b54;
   grid-area: sidebar2;
 }
 .article6 .articleContent .cell5 {
-  background: lightgreen;
+  background: #4b595e;
   grid-area: footer;
 }
 
