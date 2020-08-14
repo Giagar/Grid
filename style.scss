@@ -99,22 +99,22 @@ main {
 
 .article2 {
   .articleContent {
-      @extend %span_article-content;
-      .cell3 {
-          grid-column: span 3;
-          background: $highlightedCell;
-      }
+    @extend %span_article-content;
+    .cell3 {
+      grid-column: span 3;
+      background: $highlightedCell;
+    }
   }
 }
 
 .article3 {
-    .articleContent{
-        @extend %span_article-content;
-        .cell3 {
-            grid-column: span 5;
-            background: $highlightedCell;
-        }
+  .articleContent {
+    @extend %span_article-content;
+    .cell3 {
+      grid-column: span 5;
+      background: $highlightedCell;
     }
+  }
 }
 
 .article4 {
@@ -135,7 +135,7 @@ main {
   .articleContent {
     @extend %area_article_content;
     grid-template-rows: 50px repeat(2, 100px) 50px;
-    grid-template-areas: 
+    grid-template-areas:
       "header header header header"
       "sidebar1 main main sidebar2"
       "sidebar1 main main sidebar2"
@@ -147,47 +147,87 @@ main {
     }
 
     .cell1 {
-      background: #51bebe;
+      background: $highlightedCell;
       grid-area: header;
     }
 
     .cell2 {
-      background: #37db86;
+      background: #0DA39E;
       grid-area: main;
     }
 
     .cell3 {
-      background: #5F9579;
+      background: #51bebe;
       grid-area: sidebar1;
     }
 
     .cell4 {
-      background: #336b54;
+      background: #338A7B;
       grid-area: sidebar2;
     }
 
     .cell5 {
-      background: #4b595e;
+      background: #c46e39;
       grid-area: footer;
     }
-
-    
   }
 }
 
+.article7 {
+  .articleContent {
+    grid-gap: 0.5rem;
+    .cell {
+      background: $bg-prov;
+      text-align: center;
+      padding: 0.3rem;
+      border-radius: $bdRadius-small;
+    }
+    grid-template-areas:
+      "square1 square1 square2 square2 square2"
+      "square1 square1 square2 square2 square2"
+      "square3 square3 square4 square4 square4"
+      "square3 square3 square4 square4 square4";
+    .cell {
+      display: grid;
+      align-content: center;
+    }
+
+    .cell1 {
+      grid-column: square1-start / square1-end;
+      grid-row: square1-start / square1-end;
+    }
+
+    .cell2 {
+      grid-column: square2-start / square2-end;
+      grid-row: square2-start / square2-end;
+    }
+
+    .cell3 {
+      grid-column: square3-start / square3-end;
+      grid-row: square3-start / square3-end;
+    }
+
+    .cell4 {
+      grid-column: square4-start / square4-end;
+      grid-row: square4-start / square4-end;
+      background: $highlightedCell;
+      font-size: 4rem;
+    }
+  }
+}
 
 @media screen and (max-width: 600px) {
   .article6 {
     .articleContent {
-    grid-template-areas: 
-      "sidebar1 sidebar1 sidebar1 sidebar1"
-      "main main main main"
-      "main main main main"
-      "footer footer footer footer";
-      .cell1, .cell4 {
+      grid-template-areas:
+        "sidebar1 sidebar1 sidebar1 sidebar1"
+        "main main main main"
+        "main main main main"
+        "footer footer footer footer";
+      .cell1,
+      .cell4 {
         display: none;
       }
     }
   }
-  
 }

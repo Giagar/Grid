@@ -109,31 +109,65 @@ main .section .article .articleContent {
   align-content: center;
 }
 .article6 .articleContent .cell1 {
-  background: #51bebe;
+  background: #e69500;
   grid-area: header;
 }
 .article6 .articleContent .cell2 {
-  background: #37db86;
+  background: #0DA39E;
   grid-area: main;
 }
 .article6 .articleContent .cell3 {
-  background: #5F9579;
+  background: #51bebe;
   grid-area: sidebar1;
 }
 .article6 .articleContent .cell4 {
-  background: #336b54;
+  background: #338A7B;
   grid-area: sidebar2;
 }
 .article6 .articleContent .cell5 {
-  background: #4b595e;
+  background: #c46e39;
   grid-area: footer;
+}
+
+.article7 .articleContent {
+  grid-gap: 0.5rem;
+  grid-template-areas: "square1 square1 square2 square2 square2" "square1 square1 square2 square2 square2" "square3 square3 square4 square4 square4" "square3 square3 square4 square4 square4";
+}
+.article7 .articleContent .cell {
+  background: rgba(31, 173, 173, 0.8);
+  text-align: center;
+  padding: 0.3rem;
+  border-radius: 2px;
+}
+.article7 .articleContent .cell {
+  display: grid;
+  align-content: center;
+}
+.article7 .articleContent .cell1 {
+  grid-column: square1-start/square1-end;
+  grid-row: square1-start/square1-end;
+}
+.article7 .articleContent .cell2 {
+  grid-column: square2-start/square2-end;
+  grid-row: square2-start/square2-end;
+}
+.article7 .articleContent .cell3 {
+  grid-column: square3-start/square3-end;
+  grid-row: square3-start/square3-end;
+}
+.article7 .articleContent .cell4 {
+  grid-column: square4-start/square4-end;
+  grid-row: square4-start/square4-end;
+  background: #e69500;
+  font-size: 4rem;
 }
 
 @media screen and (max-width: 600px) {
   .article6 .articleContent {
     grid-template-areas: "sidebar1 sidebar1 sidebar1 sidebar1" "main main main main" "main main main main" "footer footer footer footer";
   }
-  .article6 .articleContent .cell1, .article6 .articleContent .cell4 {
+  .article6 .articleContent .cell1,
+.article6 .articleContent .cell4 {
     display: none;
   }
 }
