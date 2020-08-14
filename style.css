@@ -1,9 +1,9 @@
-.article3 .articleContent, .article2 .articleContent, .article1 .articleContent, .article5 .articleContent, .article4 .articleContent {
+.article3 .articleContent, .article2 .articleContent, .article1 .articleContent, .article6 .articleContent, .article5 .articleContent, .article4 .articleContent {
   display: grid;
   grid-template-columns: repeat(4, 25fr);
   grid-gap: 0.5rem;
 }
-.article3 .articleContent .cell, .article2 .articleContent .cell, .article1 .articleContent .cell, .article5 .articleContent .cell, .article4 .articleContent .cell {
+.article3 .articleContent .cell, .article2 .articleContent .cell, .article1 .articleContent .cell, .article6 .articleContent .cell, .article5 .articleContent .cell, .article4 .articleContent .cell {
   background: rgba(31, 173, 173, 0.8);
   text-align: center;
   padding: 0.3rem;
@@ -98,6 +98,44 @@ main .section .article .articleContent {
 
 .article5 .articleContent {
   grid-template-columns: repeat(auto-fit, minmax(35px, auto));
+}
+
+.article6 .articleContent {
+  grid-template-rows: 50px repeat(2, 100px) 50px;
+  grid-template-areas: "header header header header" "sidebar1 main main sidebar2" "sidebar1 main main sidebar2" "footer footer footer footer";
+}
+.article6 .articleContent .cell {
+  display: grid;
+  align-content: center;
+}
+.article6 .articleContent .cell1 {
+  background: grey;
+  grid-area: header;
+}
+.article6 .articleContent .cell2 {
+  background: green;
+  grid-area: main;
+}
+.article6 .articleContent .cell3 {
+  background: blue;
+  grid-area: sidebar1;
+}
+.article6 .articleContent .cell4 {
+  background: orange;
+  grid-area: sidebar2;
+}
+.article6 .articleContent .cell5 {
+  background: lightgreen;
+  grid-area: footer;
+}
+
+@media screen and (max-width: 600px) {
+  .article6 .articleContent {
+    grid-template-areas: "sidebar1 sidebar1 sidebar1 sidebar1" "main main main main" "main main main main" "footer footer footer footer";
+  }
+  .article6 .articleContent .cell1, .article6 .articleContent .cell4 {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

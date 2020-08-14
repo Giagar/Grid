@@ -21,6 +21,10 @@ $highlightedCell: hsla(39, 100%, 45%, 1);
   border-radius: $bdRadius-small;
 }
 
+%area_article_content {
+  @extend %span_article-content;
+}
+
 :root {
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
@@ -125,4 +129,65 @@ main {
     @extend %auto_article-content;
     grid-template-columns: repeat(auto-fit, minmax(35px, auto));
   }
+}
+
+.article6 {
+  .articleContent {
+    @extend %area_article_content;
+    grid-template-rows: 50px repeat(2, 100px) 50px;
+    grid-template-areas: 
+      "header header header header"
+      "sidebar1 main main sidebar2"
+      "sidebar1 main main sidebar2"
+      "footer footer footer footer";
+
+    .cell {
+      display: grid;
+      align-content: center;
+    }
+
+    .cell1 {
+      background: grey;
+      grid-area: header;
+    }
+
+    .cell2 {
+      background: green;
+      grid-area: main;
+    }
+
+    .cell3 {
+      background: blue;
+      grid-area: sidebar1;
+    }
+
+    .cell4 {
+      background: orange;
+      grid-area: sidebar2;
+    }
+
+    .cell5 {
+      background: lightgreen;
+      grid-area: footer;
+    }
+
+    
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .article6 {
+    .articleContent {
+    grid-template-areas: 
+      "sidebar1 sidebar1 sidebar1 sidebar1"
+      "main main main main"
+      "main main main main"
+      "footer footer footer footer";
+      .cell1, .cell4 {
+        display: none;
+      }
+    }
+  }
+  
 }
