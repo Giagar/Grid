@@ -216,6 +216,50 @@ main {
   }
 }
 
+.article8 {
+  .articleContent {
+    @extend %span_article-content;
+    grid-template-columns: 
+      [sidebarLeft-start] 25fr [sidebarLeft-end main-start] 50fr [main-end sidebarRight-start] 25fr [sidebarRight-end];
+    grid-template-rows: 
+      [header-start] 25fr [header-end 
+      content-start] 50fr [content-end 
+      footer-start] 25fr [footer-end];
+    height: 400px;
+
+    .cell {
+      display: grid;
+      align-content: center;
+    }
+    
+    .cell1 {
+      grid-column: sidebarLeft-start / sidebarRight-end;
+      grid-row: header-start / header-end;
+      background: $highlightedCell;
+    }
+
+    .cell2 {
+      grid-column: sidebarLeft-start / sidebarLeft-end;
+      grid-row: content-start / content-end !important;
+      background: $highlightedCell;
+    }
+
+    .cell3 {
+      grid-column: 2 / main-end;
+      grid-row: content-start / 3;
+      background: $highlightedCell;
+    }
+
+    .cell5 {
+      grid-column: 1 / span 3;
+      grid-row: footer-start / footer-end;
+      background: $highlightedCell;
+    }
+
+  }
+  
+}
+
 @media screen and (max-width: 600px) {
   .article6 {
     .articleContent {
