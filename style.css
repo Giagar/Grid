@@ -1,9 +1,9 @@
-.article9 .articleContent, .article3 .articleContent, .article2 .articleContent, .article1 .articleContent, .article7 .articleContent, .article6 .articleContent, .article5 .articleContent {
+.article9 .articleContent, .article4 .articleContent, .article3 .articleContent, .article2 .articleContent, .article1 .articleContent, .article7 .articleContent, .article6 .articleContent, .article5 .articleContent {
   display: grid;
   grid-template-columns: repeat(4, 25fr);
   grid-gap: 0.5rem;
 }
-.article9 .articleContent .cell, .article3 .articleContent .cell, .article2 .articleContent .cell, .article1 .articleContent .cell, .article7 .articleContent .cell, .article6 .articleContent .cell, .article5 .articleContent .cell {
+.article9 .articleContent .cell, .article4 .articleContent .cell, .article3 .articleContent .cell, .article2 .articleContent .cell, .article1 .articleContent .cell, .article7 .articleContent .cell, .article6 .articleContent .cell, .article5 .articleContent .cell {
   background: rgba(31, 173, 173, 0.8);
   text-align: center;
   padding: 0.3rem;
@@ -89,6 +89,28 @@ main .section .article .articleContent {
 
 .article3 .articleContent .cell3 {
   grid-column: span 5;
+  background: #e69500;
+}
+
+.article4 .articleContent {
+  grid-template-columns: repeat(10, 10fr);
+  grid-auto-flow: dense;
+}
+.article4 .articleContent .cell:nth-child(3n) {
+  grid-column: span 2;
+  background: #e69500;
+}
+.article4 .articleContent .cell2 {
+  grid-row: span 2;
+  background: #e69500;
+}
+.article4 .articleContent .cell8 {
+  grid-row: span 2;
+  background: #e69500;
+}
+.article4 .articleContent .cell14 {
+  grid-column: span 3;
+  grid-row: span 4;
   background: #e69500;
 }
 

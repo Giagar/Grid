@@ -117,6 +117,38 @@ main {
   }
 }
 
+.article4 {
+  .articleContent {
+    @extend %span_article-content;
+    grid-template-columns: repeat(10, 10fr);
+    grid-auto-flow: dense;
+
+
+    .cell:nth-child(3n) {
+      grid-column: span 2;
+      background: $highlightedCell;
+    } 
+
+    .cell2{
+      grid-row: span 2;
+      background: $highlightedCell;
+    }
+
+    .cell8 {
+      grid-row: span 2;
+      background: $highlightedCell;
+    }
+
+    .cell14{
+      grid-column: span 3;
+      grid-row: span 4;
+      background: $highlightedCell;
+    }
+
+    
+  }
+}
+
 .article5 {
   .articleContent {
     @extend %auto_article-content;
