@@ -215,12 +215,23 @@ main .section .article .articleContent {
 }
 
 @media screen and (max-width: 600px) {
+  .article4 .articleContent {
+    grid-template-columns: repeat(5, 20fr);
+  }
+
   .article7 .articleContent {
     grid-template-areas: "sidebar1 sidebar1 sidebar1 sidebar1" "main main main main" "main main main main" "footer footer footer footer";
   }
   .article7 .articleContent .cell1,
 .article7 .articleContent .cell4 {
     display: none;
+  }
+
+  .article9 .articleContent {
+    grid-template-columns: [sidebarLeft-start] 50fr [sidebarLeft-end main-start] 50fr [sidebarRight-end];
+  }
+  .article9 .articleContent .cell1, .article9 .articleContent .cell2, .article9 .articleContent .cell3, .article9 .articleContent .cell5 {
+    grid-column: 1/sidebarRight-end;
   }
 }
 

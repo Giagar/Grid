@@ -293,6 +293,12 @@ main {
 }
 
 @media screen and (max-width: 600px) {
+  .article4 {
+    .articleContent {
+      grid-template-columns: repeat(5, 20fr);
+    }
+  }
+
   .article7 {
     .articleContent {
       grid-template-areas:
@@ -304,6 +310,17 @@ main {
       .cell4 {
         display: none;
       }
+    }
+  }
+
+  .article9 {
+    .articleContent {
+      grid-template-columns: 
+      [sidebarLeft-start] 50fr [sidebarLeft-end main-start] 50fr [sidebarRight-end];
+      
+      .cell1, .cell2, .cell3, .cell5 {
+        grid-column: 1 / sidebarRight-end;
+      }   
     }
   }
 }
