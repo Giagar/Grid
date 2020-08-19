@@ -123,13 +123,12 @@ main {
     grid-template-columns: repeat(10, 10fr);
     grid-auto-flow: dense;
 
-
     .cell:nth-child(3n) {
       grid-column: span 2;
       background: $highlightedCell;
-    } 
+    }
 
-    .cell2{
+    .cell2 {
       grid-row: span 2;
       background: $highlightedCell;
     }
@@ -139,13 +138,11 @@ main {
       background: $highlightedCell;
     }
 
-    .cell14{
+    .cell14 {
       grid-column: span 3;
       grid-row: span 4;
       background: $highlightedCell;
     }
-
-    
   }
 }
 
@@ -184,7 +181,7 @@ main {
     }
 
     .cell2 {
-      background: #0DA39E;
+      background: #0da39e;
       grid-area: main;
     }
 
@@ -194,7 +191,7 @@ main {
     }
 
     .cell4 {
-      background: #338A7B;
+      background: #338a7b;
       grid-area: sidebar2;
     }
 
@@ -251,11 +248,10 @@ main {
 .article9 {
   .articleContent {
     @extend %span_article-content;
-    grid-template-columns: 
-      [sidebarLeft-start] 25fr [sidebarLeft-end main-start] 50fr [main-end sidebarRight-start] 25fr [sidebarRight-end];
-    grid-template-rows: 
-      [header-start] 25fr [header-end 
-      content-start] 50fr [content-end 
+    grid-template-columns: [sidebarLeft-start] 25fr [sidebarLeft-end main-start] 50fr [main-end sidebarRight-start] 25fr [sidebarRight-end];
+    grid-template-rows:
+      [header-start] 25fr [header-end
+      content-start] 50fr [content-end
       footer-start] 25fr [footer-end];
     height: 400px;
 
@@ -263,7 +259,7 @@ main {
       display: grid;
       align-content: center;
     }
-    
+
     .cell1 {
       grid-column: sidebarLeft-start / sidebarRight-end;
       grid-row: header-start / header-end;
@@ -287,9 +283,7 @@ main {
       grid-row: footer-start / footer-end;
       background: $highlightedCell;
     }
-
   }
-  
 }
 
 @media screen and (max-width: 600px) {
@@ -315,12 +309,14 @@ main {
 
   .article9 {
     .articleContent {
-      grid-template-columns: 
-      [sidebarLeft-start] 50fr [sidebarLeft-end main-start] 50fr [sidebarRight-end];
-      
-      .cell1, .cell2, .cell3, .cell5 {
+      grid-template-columns: [sidebarLeft-start] 50fr [sidebarLeft-end main-start] 50fr [sidebarRight-end];
+
+      .cell1,
+      .cell2,
+      .cell3,
+      .cell5 {
         grid-column: 1 / sidebarRight-end;
-      }   
+      }
     }
   }
 }
