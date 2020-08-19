@@ -117,21 +117,21 @@ main {
   }
 }
 
-.article4 {
+.article5 {
   .articleContent {
     @extend %auto_article-content;
     grid-template-columns: repeat(auto-fill, minmax(35px, auto));
   }
 }
 
-.article5 {
+.article6 {
   .articleContent {
     @extend %auto_article-content;
     grid-template-columns: repeat(auto-fit, minmax(35px, auto));
   }
 }
 
-.article6 {
+.article7 {
   .articleContent {
     @extend %area_article_content;
     grid-template-rows: 50px repeat(2, 100px) 50px;
@@ -173,7 +173,7 @@ main {
   }
 }
 
-.article7 {
+.article8 {
   .articleContent {
     grid-gap: 0.5rem;
     .cell {
@@ -216,7 +216,7 @@ main {
   }
 }
 
-.article8 {
+.article9 {
   .articleContent {
     @extend %span_article-content;
     grid-template-columns: 
@@ -261,7 +261,7 @@ main {
 }
 
 @media screen and (max-width: 600px) {
-  .article6 {
+  .article7 {
     .articleContent {
       grid-template-areas:
         "sidebar1 sidebar1 sidebar1 sidebar1"
